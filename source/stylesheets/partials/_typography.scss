@@ -1,0 +1,13 @@
+$font-sans: 'avenir', 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+$font-slab: 'museo-slab', Rockwell, 'Courier Bold', Courier, Georgia, Times, 'Times New Roman', serif;
+
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: $font-sans;
+  @include font-size(15);
+  color: $black;
+}
