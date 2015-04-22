@@ -1,0 +1,7 @@
+section.hero {
+	@include full-width;
+	background: image-url('background_desktop_blur.jpg') center no-repeat;
+	background-size: cover;
+	padding-top: 150px;
+	text-align: center;
+}

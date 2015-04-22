@@ -5,7 +5,6 @@ $dark-blue: #466075;
 $light-khaki: #f2ede4;
 $dark-khaki: #d9d1c7;
 
-
 $light-grey: #696f75;
 $grey: #8c8681;
 $dark-grey: #3b3f42;
@@ -114,7 +113,7 @@ $black: #182128;
 // IMAGES
 $sprite: image-url("sprite.svg");
 $sprite-fallback: image-url('sprite.png');
-$sprite-size: 400px 1042px;
+$sprite-size: 400px 2637px;
 
 @mixin sprite-hover($idle-x, $position-y, $hover-x) {
   background-image: $sprite;
@@ -231,18 +230,14 @@ $sprite-size: 400px 1042px;
 
 // OTHER STYLES
 
-// .button-large {
-//   border: $white 1px solid;
-//   padding: 15px 20px 15px 60px;
-//   @include sprite-hover(-5px, -638px, 0px);
-//   display: inline-block;
-//   background-color: none;
-//   @include animate-object;
-//   color: $white;
-//   text-align: left;
-//   &:hover {
-//     background-color: $blue;
-//     border: $blue 1px solid;
-//   }
-// }
+.button {
+  @include box-sizing(border-box);
+  color: $dark-grey;
+  padding: 5px 10px;
+  &:hover {
+    // @include box-shadow($dark-grey 0 0 0 40px inset);
+    background-color: $dark-grey;
+    color: $white;
+  }
+}
 

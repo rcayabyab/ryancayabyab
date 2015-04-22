@@ -11,3 +11,12 @@ body {
   @include font-size(15);
   color: $black;
 }
+
+p {
+	margin: 15px 0;
+}
+
+a {
+	text-decoration: none;
+  @include animate-object;
+}

@@ -1,0 +1,39 @@
+header {
+  background: $light-blue;
+  @include site-width;
+  position: fixed;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  nav {
+    @include font-size(32);
+    font-family: $font-slab;
+    .menu {
+      display: none;
+    }
+    .logo {
+      width: 305px;
+      height: 53px;
+      @include img-content(-20px, -20px);
+      @include hide-text;
+      float: right;
+      opacity: 1;
+      &:hover {
+        opacity: .6;
+      }
+    }
+    ul {
+      margin-top: 14px;
+      display: inline-block;
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+        a {
+          @extend .button;
+        }
+      }
+    }
+  }
+}
