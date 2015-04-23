@@ -20,3 +20,16 @@ a {
 	text-decoration: none;
   @include animate-object;
 }
+
+h1 {
+	@include font-size(50);
+	font-family: $font-slab;
+	span {
+		@include font-size(30);
+    font-family: $font-sans;
+	}
+}
+
+h2 {
+
+}

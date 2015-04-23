@@ -1,0 +1,54 @@
+section.work {
+  @include full-width;
+  div {
+    @include aspect-ratio(3, 1);
+    width: 100%;
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &.rookwood {
+      background-image: image-url('rookwood_cover.jpg');
+    }
+    &.snaac {
+      background-image: image-url('snaac_cover.jpg');
+    }
+    &.avery {
+      background-image: image-url('avery_cover.jpg');
+    }
+    &.pep {
+      background-image: image-url('pep_cover.jpg');
+    }
+    a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      background-color: rgba($black, .9);
+      font-family: $font-slab;
+      @include font-size(50);
+      color: $white;
+      opacity: 0;
+      &:hover {
+        opacity: 1;
+      }
+      span {
+        width: 100%;
+        text-align: center;
+        position:absolute;
+        top: 50%;
+        @include vendor-prefix(transform, translateY(-50%));
+        padding: 60px;
+        @include box-sizing(border-box);
+        &::after {
+          display: block;
+          content: '- Learn About This Project -';
+          color: $dark-khaki;
+          @include font-size(25);
+          font-family: $font-sans;
+        }
+      }
+    }
+  }
+}

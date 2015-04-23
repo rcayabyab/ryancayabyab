@@ -4,6 +4,8 @@ header {
   position: fixed;
   padding-top: 15px;
   padding-bottom: 15px;
+  z-index: +2;
+  top: 0;
   nav {
     @include font-size(32);
     font-family: $font-slab;

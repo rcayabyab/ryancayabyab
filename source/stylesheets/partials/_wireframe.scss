@@ -29,4 +29,5 @@ img {
 
 .bodycontent {
   @include site-width;
+  height: 100%;
 }

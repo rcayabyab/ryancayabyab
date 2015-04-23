@@ -1,7 +1,24 @@
 section.hero {
 	@include full-width;
+	height: 100%;
 	background: image-url('background_desktop_blur.jpg') center no-repeat;
 	background-size: cover;
-	padding-top: 150px;
 	text-align: center;
+  position: relative;
+  h1 {
+    color: $white;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 60%;
+    // transform: translateY(-50%);
+    @include vendor-prefix(transform, translateY(-60%));
+    span {
+      color: $dark-khaki;
+      display: block;
+    }
+    img {
+      margin-top: 30px;
+    }
+  }
 }
