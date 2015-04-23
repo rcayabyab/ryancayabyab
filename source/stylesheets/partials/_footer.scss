@@ -1,0 +1,46 @@
+footer {
+  @include site-width;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: $dark-khaki;
+  // z-index: +1;
+  nav {
+    ul {
+      text-align: center;
+      &:hover {
+        a {
+          opacity: .5;
+        }
+      }
+      li {
+        display: inline-block;
+        margin: 15px;
+        a {
+          width: 137px;
+          height: 137px;
+          &:hover {
+            opacity: 1;
+          }
+          &.email {
+            @include img-content(-20px, -1630px);
+          }
+          &.linkedin {
+            @include img-content(-20px, -1800px);
+          }
+          &.twitter {
+            @include img-content(-20px, -1980px);
+          }
+          &.facebook {
+            @include img-content(-20px, -2170px);
+          }
+          &.instagram {
+            @include img-content(-20px, -2350px);
+          }
+        }
+      }
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
