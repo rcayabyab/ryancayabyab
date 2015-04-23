@@ -1,5 +1,11 @@
 section.work {
   @include full-width;
+  height: 100%;
+  span.spacer {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
   div {
     @include aspect-ratio(3, 1);
     width: 100%;
