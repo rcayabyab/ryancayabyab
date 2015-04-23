@@ -6,6 +6,7 @@
 
 @mixin full-width { //overrides site width for full bleed
     width: 111.5%;
+    // margin: 0 -5.95% 0 -5.95%;
     margin: 0 -5.95% 0 -5.95%;
     @include box-sizing(border-box);
 }
@@ -21,7 +22,7 @@ html {
 
 body {
   min-height: 100%;
-  background: $black;
+  background: $light-khaki;
 }
 
 img {
@@ -30,9 +31,28 @@ img {
   height: auto;
 }
 
+.split {
+  @include flexbox();
+  padding: 60px 0;
+  div {
+    width: 67%;
+    @include flex(1 1 auto);
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  aside {
+    width: 33%;
+    @include flex(1 1 auto);
+    padding: 0 30px;
+  }
+}
+
+
+
 .bodycontent {
   @include site-width;
   display: black;
   min-height: 100%;
   position: relative;
+  padding-top: 85px;
 }

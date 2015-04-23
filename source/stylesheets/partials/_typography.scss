@@ -8,13 +8,13 @@ html {
 
 body {
   font-family: $font-sans;
-  @include font-size(15);
+  @include font-size(16);
   color: $black;
 }
 
 p {
-	margin: 15px 0;
-  color: $dark-blue;
+	margin: 0 0 15px;
+  color: $black;
 }
 
 a {
@@ -33,4 +33,11 @@ h1 {
 
 h2 {
 
+}
+
+h3 {
+  @include font-size(39);
+  font-family: $font-slab;
+  color: $light-blue;
+  margin-bottom: 15px;
 }

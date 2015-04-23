@@ -159,7 +159,7 @@ $sprite-size: 400px 2637px;
   flex-flow:  $values;
 }
 
-@mixin flex($values) { // (flex-grow, flex-shrink, flex-basis)
+@mixin flex($values) { // (flex-grow flex-shrink flex-basis)
   -webkit-box-flex: $values;
   -moz-box-flex:  $values;
   -webkit-flex:  $values;
