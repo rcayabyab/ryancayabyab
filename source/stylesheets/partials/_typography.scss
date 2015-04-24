@@ -20,6 +20,10 @@ p {
 a {
 	text-decoration: none;
   @include animate-object;
+  color: $light-blue;
+  &:hover {
+    color: $dark-blue;
+  }
 }
 
 h1 {
