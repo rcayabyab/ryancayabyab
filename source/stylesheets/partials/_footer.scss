@@ -3,7 +3,8 @@ footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background: $dark-khaki;
-  // z-index: +1;
+  z-index: +1;
+  position: relative;
   nav {
     ul {
       text-align: center;
@@ -43,5 +44,6 @@ footer {
   p {
     text-align: center;
     color: $dark-blue;
+    margin-top: 30px;
   }
 }
