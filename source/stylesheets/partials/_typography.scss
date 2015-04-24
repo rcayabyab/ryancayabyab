@@ -41,3 +41,8 @@ h3 {
   color: $light-blue;
   margin-bottom: 15px;
 }
+
+h4 {
+  @include font-size(22);
+  color: $light-blue;
+}

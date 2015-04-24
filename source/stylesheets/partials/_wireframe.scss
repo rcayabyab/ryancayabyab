@@ -22,7 +22,13 @@ html {
 
 body {
   min-height: 100%;
-  background: $light-khaki;
+  background: $black;
+  &.about {
+    background: $light-khaki;
+  }
+  &.work {
+    background: $light-grey;
+  }
 }
 
 img {
@@ -44,6 +50,18 @@ img {
     width: 33%;
     @include flex(1 1 auto);
     padding: 0 30px;
+  }
+  body.work & {
+    display: block;
+    div {
+      width: 60%;
+      margin-left: 40%;
+    }
+    aside {
+      width: 33%;
+      position: fixed;
+      padding: 0;
+    }
   }
 }
 

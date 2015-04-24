@@ -108,15 +108,13 @@
   }
 }
 
-.awards {
+.recognition {
   padding-top: 60px;
   padding-bottom: 60px;
   ul {
     @include column-count(2);
     @include column-gap(30px);
     li {
-      @include font-size(22);
-      color: $light-blue;
       margin: 0 0 30px;
       @include vendor-prefix(column-break-inside, avoid);
       @include vendor-prefix(break-inside, avoid-column);
