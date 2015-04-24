@@ -1,0 +1,25 @@
+---
+title: Ryan Cayabyab - Interactive Designer / Front-End Dev - Work - Rookwood Pottery
+---
+
+<article class="split piece">
+
+  <aside>
+    <h3>Rookwood Pottery</h3>
+    <p>Rookwood Pottery was in need of a new shopping site that also reflects the craftsmanship of their products. The site was designed in a way to showcase their products for what they are...pieces of art. Large imagery of their products in use and focusing in on the details that go into each piece was key in showing off their amazing work. The shopping process was simplified so users can easily browse, find, and purchase what they want.</p>
+    <p><%= link_to 'Visit Site','#' %></p>
+    <ul class="cycle">
+      <li><%= link_to 'Visit Site','#', class:'left_arrow' %></li>
+      <li><%= link_to 'Visit Site','#', class:'right_arrow' %></li>
+    </ul>
+  </aside>
+
+  <div>
+    <%= image_tag("rookwood_full_homepage.jpg", :alt => "Rookwood Pottery Website - Homepage") %>
+    <%= image_tag("rookwood_full_shop.jpg", :alt => "Rookwood Pottery Website - Product Shopping Page") %>
+    <%= image_tag("rookwood_full_about.jpg", :alt => "Rookwood Pottery Website - About Page") %>
+  </div>
+
+</article>
+
+<%= partial "work" %>

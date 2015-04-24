@@ -73,11 +73,38 @@ article.piece {
   aside {
     p {
       color: $white;
+      a {
+        @extend .button;
+        @include font-size(25);
+        font-family: $font-slab;
+      }
     }
-    a {
-      @extend .button;
-      @include font-size(25);
-      font-family: $font-slab;
+    ul.cycle {
+      margin-top: 15px;
+      display: inline-block;
+      opacity: 1;
+      &:hover {
+        a {
+          opacity: .5;
+        }
+      }
+      li {
+        display: inline-block;
+        a {
+          width: 42px;
+          height: 42px;
+          &:hover {
+            opacity: 1;
+          }
+          &.left_arrow {
+            @include img-content(-20px, -2640px);
+            margin-right: 15px;
+          }
+          &.right_arrow {
+            @include img-content(-20px, -2720px);
+          }
+        }
+      }
     }
   }
 }
