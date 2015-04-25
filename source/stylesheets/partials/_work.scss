@@ -80,15 +80,35 @@ article.piece {
     p {
       color: $white;
       a {
-        @extend .button;
         @include font-size(25);
         font-family: $font-slab;
+        display: block;
+        text-align: center;
+        border: $dark-grey 3px solid;
+        padding: 5px;
+        color: $dark-grey;
+        @include respond-to(medium) {
+          display: inline-block;
+          text-align: left;
+          border: none;
+          padding: 5px 10px;
+          &:hover {
+            // @include box-shadow($dark-grey 0 0 0 40px inset);
+            background-color: $dark-grey;
+            color: $white;
+          }
+        }
       }
     }
     ul.cycle {
-      margin-top: 15px;
-      display: inline-block;
+      // margin-top: 15px;
+      display: block;
       opacity: 1;
+      text-align: center;
+      @include respond-to(medium) {
+        text-align: left;
+        display: inline-block;
+      }
       &:hover {
         a {
           opacity: .5;

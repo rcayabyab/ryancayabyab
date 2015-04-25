@@ -39,31 +39,63 @@ img {
 
 .split {
   @include flexbox();
+  @include flex-flow(column-reverse);
   padding: 60px 0;
+  @include respond-to(medium) {
+    @include flex-flow(row);
+  }
   div {
-    width: 67%;
+    width: 100%;
     @include flex(1 1 auto);
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    @include respond-to(medium) {
+      width: 67%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   aside {
-    width: 33%;
+    width: 100%;
     @include flex(1 1 auto);
-    padding: 0 30px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+    @include respond-to(medium) {
+      width: 33%;
+      padding: 0 30px;
+    }
   }
   body.work & {
     display: block;
+    padding: 30px 0;
+    @include respond-to(large) {
+      padding: 60px 0;
+    }
     div {
-      width: 60%;
-      margin-left: 40%;
+      width: 100%;
+      margin-left: 0;
+      padding: 0;
+      @include respond-to(large) {
+        width: 60%;
+        margin-left: 40%;
+        padding-left: 30px;
+      }
     }
     aside {
-      width: 32%;
-      height: 66%;
+      width: 100%;
+      height: auto;
       overflow-y: auto;
-      position: fixed;
-      padding: 0 30px 15px 0;
+      position: relative;
+      padding: 0;
       z-index: 0;
+      text-align: left;
+      @include respond-to(large) {
+        position: fixed;
+        width: 32%;
+        height: 66%;
+        padding: 0 30px 15px 0;
+      }
     }
   }
 }
@@ -75,5 +107,5 @@ img {
   display: black;
   min-height: 100%;
   position: relative;
-  padding-top: 85px;
+  padding-top: 75px;
 }

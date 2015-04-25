@@ -11,10 +11,10 @@ $(document).ready(function(){
   });
 
   if ( $(window).width() > 850) { // MEDIUM
-    $('section.work').css("margin-top", screenheight);
+    $('body.index section.work').css("margin-top", screenheight);
   }
   else {
-    $('section.work').css("margin-top", 0);
+    $('body.index section.work').css("margin-top", 0);
   }
 
 });
