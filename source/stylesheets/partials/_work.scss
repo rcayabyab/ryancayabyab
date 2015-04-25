@@ -2,14 +2,14 @@ section.work { //FULL LIST
   @include full-width;
   min-height: 100%;
   position: relative;
-  // span.spacer {
+  // div.spacer {
   //   width: 100%;
   //   min-height: 100%;
-  //   display: block;
+  //   position: relative;
   // }
-  body.index & {
-    margin-top: 65%;
-  }
+  // body.index & {
+  //   margin-top: 65%;
+  // }
   h2 {
     @include aspect-ratio(3, 1);
     width: 100%;

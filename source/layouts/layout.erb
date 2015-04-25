@@ -11,7 +11,6 @@
     <title><%= current_page.data.title || "Ryan Cayabyab - Interactive Designer / Front-End Dev" %></title>
     
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag  "all" %>
   </head>
   
   <body class="<%= page_classes %>">
@@ -20,5 +19,7 @@
       <%= yield %>
     </div>
     <%= partial "footer" %>
+    <%= javascript_include_tag  "jquery" %>
+    <%= javascript_include_tag  "application" %>
   </body>
 </html>

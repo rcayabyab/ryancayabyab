@@ -3,37 +3,78 @@ header {
   @include site-width;
   position: fixed;
   padding-top: 15px;
-  padding-bottom: 15px;
   z-index: +2;
   top: 0;
   nav {
     @include font-size(32);
     font-family: $font-slab;
-    .menu {
-      display: none;
+    .hamburger {
+      width: 42px;
+      height: 42px;
+      margin-top: 0;
+      float: left;
+      @include img-content(-20px, -2550px);
+      display: inline-block;
+      @include respond-to(xsmall) {
+        margin-top: 5px;
+      }
+      @include respond-to(medium) {
+        display: none;
+      }
+      &.menuopen {
+        @include img-content(-80px, -2550px);
+        display: inline-block;
+      }
     }
     .logo {
-      width: 305px;
-      height: 53px;
-      @include img-content(-20px, -20px);
+      width: 56px;
+        height: 45px;
+        @include img-content(-20px, -100px);
       @include hide-text;
       float: right;
       opacity: 1;
       &:hover {
         opacity: .6;
       }
+      @include respond-to(xsmall) {
+        width: 305px;
+        height: 53px;
+        @include img-content(-20px, -20px);
+      }
     }
     ul {
-      margin-top: 14px;
-      display: inline-block;
-      li {
+      margin-top: 9px;
+      max-height: 0;
+      overflow: hidden;
+      clear: both;
+      padding-top: 15px;
+      text-align: center;
+      @include animate-object;
+      @include respond-to(medium) {
         display: inline-block;
-        margin-right: 10px;
-        &:last-child {
-          margin-right: 0;
+        max-height: 200px;
+        clear: none;
+        padding-top: 0;
+        text-align: left;
+      }
+      &.show_nav {
+        max-height: 250px;
+      }
+      li {
+        display: block;
+        border-top: $dark-blue 1px solid;
+        @include respond-to(medium) {
+          display: inline-block;
+          border-top: none;
+          margin-right: 10px;
         }
         a {
           @extend .button;
+          padding: 5px;
+          display: block;
+          @include respond-to(medium) {
+            padding: 5px 10px;
+          }
         }
       }
     }
