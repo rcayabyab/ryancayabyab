@@ -1,22 +1,31 @@
 section.hero {
 	@include full-width;
+  padding: 60px 5%;
 	min-height: 100%;
 	background: image-url('background_desktop_blur.jpg') center no-repeat;
 	background-size: cover;
 	text-align: center;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
   z-index: 0;
+  @include respond-to(medium) {
+    position: fixed;
+    padding: 0;
+  }
   h1 {
     color: $white;
-    position: absolute;
+    position: relative;
     text-align: center;
     width: 100%;
-    top: 60%;
-    // transform: translateY(-50%);
-    @include vendor-prefix(transform, translateY(-60%));
+    top: auto;
+    @include vendor-prefix(transform, translateY(auto));
+    @include respond-to(medium) {
+      position: absolute;
+      top: 60%;
+      @include vendor-prefix(transform, translateY(-60%));
+    }
     span {
       color: $dark-khaki;
       display: block;
