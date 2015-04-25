@@ -27,12 +27,18 @@ a {
 }
 
 h1 {
-	@include font-size(50);
+	@include font-size(40);
 	font-family: $font-slab;
 	span {
-		@include font-size(30);
+		@include font-size(25);
     font-family: $font-sans;
 	}
+  @include respond-to(small) {
+    @include font-size(50);
+    span {
+      @include font-size(30);
+    }
+  }
 }
 
 h2 {

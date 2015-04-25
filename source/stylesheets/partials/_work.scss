@@ -11,12 +11,18 @@ section.work { //FULL LIST
   //   margin-top: 65%;
   // }
   h2 {
-    @include aspect-ratio(3, 1);
+    @include aspect-ratio(1, 1);
     width: 100%;
     display: block;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    @include respond-to(xsmall) {
+      @include aspect-ratio(2, 1);
+    }
+    @include respond-to(medium) {
+      @include aspect-ratio(3, 1);
+    }
     &.rookwood {
       background-image: image-url('rookwood_cover.jpg');
     }
