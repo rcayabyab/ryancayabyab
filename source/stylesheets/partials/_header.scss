@@ -49,6 +49,8 @@ header {
       clear: both;
       padding-top: 15px;
       text-align: center;
+      display: block;
+      position: relative;
       @include animate-object;
       @include respond-to(medium) {
         display: inline-block;
@@ -58,7 +60,7 @@ header {
         text-align: left;
       }
       &.show_nav {
-        max-height: 250px;
+        max-height: 250px !important;
       }
       li {
         display: block;

@@ -19,10 +19,11 @@ $(document).ready(function(){
     });
   });
 
-  $('.hamburger').click(function(e) {
-    e.preventDefault();
+  $('.hamburger').click(function() {
+    // e.preventDefault();
     $('header nav ul').toggleClass('show_nav');
-    return $(this).toggleClass('menuopen');
+    $(this).toggleClass('menuopen');
+    return false;
   });
 
   if ( $(window).width() > 850) { // MEDIUM
