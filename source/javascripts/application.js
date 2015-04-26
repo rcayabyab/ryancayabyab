@@ -4,6 +4,13 @@ $(document).ready(function(){
 
   var screenheight = $(window).height();
 
+  if ( $(window).width() > 1025) { // MEDIUM - ORIGINAL 850 CHANGED FOR IPAD
+    $('body.index section.work').css("margin-top", screenheight);
+  }
+  else {
+    $('body.index section.work').css("margin-top", 0);
+  }
+
   $(function() { // SMOOTH SCROLL
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -39,7 +46,7 @@ $(document).ready(function(){
     $('.hamburger').toggleClass('menuopen');
   });
 
-  $('.tools_icon').click(function(e) { // TOGGLE MOBILE NAV ON HAMBURGER CLICK
+  $('.tools_icon').click(function(e) { // TOGGLE TOOLS IN FOOTER
     e.preventDefault();
     $('.tools').toggleClass('madeofopen');
     $(this).toggleClass('tools_icon_open');
@@ -53,13 +60,6 @@ $(document).ready(function(){
       $('.tools').show();
     }
   });
-
-  if ( $(window).width() > 1025) { // MEDIUM - ORIGINAL 850 CHANGED FOR IPAD
-    $('body.index section.work').css("margin-top", screenheight);
-  }
-  else {
-    $('body.index section.work').css("margin-top", 0);
-  }
 
   // window.onorientationchange = function()
   // {

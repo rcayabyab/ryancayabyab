@@ -13,7 +13,6 @@ header {
       height: 36px;
       margin-top: 0;
       float: left;
-      // @include img-content(-20px, -2550px);
       @include img-content(-10px, -2790px);
       @include border-radius(21px);
       border: $dark-grey 3px solid;
@@ -26,7 +25,6 @@ header {
         display: none;
       }
       &.menuopen {
-        // @include img-content(-80px, -2550px);
         @include img-content(-44px, -2790px);
         display: block;
       }
