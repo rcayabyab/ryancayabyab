@@ -1,14 +1,23 @@
 <!doctype html>
 <html>
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta name="author" content="Ryan Cayabyab - ryancayabyab.com">
+    <meta name="description" content="After graduating from OIP&T in 2005 where I studied Graphic Design, I worked at RDG-Ruttle Design Group. It was here that I nurtured my nerdy side and choose the world of web design & front-end dev. Since then, I have taken my talents to companies like US Digital Partners, Openfield Creative, Pep, and Topic Design. I have worked with brands such as P&G, Kroger, Toyota, Perfetti Van Melle, and others, to not only improve their web efforts but their social media strategies as well. I’ve also collected American Web Design, AVA, MarCom, American Graphic Design, Davey, ADDY, and Cincinnati Chamber awards in the process. When I’m not creating websites, I’m passionate about building Cincinnati's creative community through volunteering. I have been on the AIGA Cincinnati board since 2011 and I currently serve as the chapter’s co-president. As part of the Creative Mornings Cincinnati team, I’ve been directing social media and greeting morning people since 2013.">
+    <meta name="google-site-verification" content="vEaSXa8ndkiV3CpUca5b1Xk7hyNwOdsq9ZuxYZ5e0n8" />
     
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= current_page.data.title || "Ryan Cayabyab - Interactive Designer / Front-End Dev" %></title>
+
+    <%= favicon_tag 'images/favicon.ico' %>
+    <%= favicon_tag 'apple-touch-icon-precomposed.png', rel: 'apple-touch-icon-precomposed' %>
+    <%= favicon_tag 'apple-touch-icon-57x57-precomposed.png', rel: 'apple-touch-icon-precomposed', size: '57x57' %>
+    <%= favicon_tag 'apple-touch-icon-72x72-precomposed.png', rel: 'apple-touch-icon-precomposed', size: '72x72' %>
+    <%= favicon_tag 'apple-touch-icon-114x114-precomposed.png', rel: 'apple-touch-icon-precomposed', size: '114x114' %>
     
     <%= stylesheet_link_tag "application" %>
   </head>
@@ -19,7 +28,16 @@
       <%= yield %>
     </div>
     <%= partial "footer" %>
-    <%= javascript_include_tag  "jquery" %>
-    <%= javascript_include_tag  "application" %>
+    <a class="fancybox fancybox.iframe egg" href="http://www.youtube.com/embed/SSUXXzN26zg?rel=0">Fancybox</a>
+    <%= javascript_include_tag  "jquery", "application", "fancybox", "konami" %>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-24065522-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
+
 </html>

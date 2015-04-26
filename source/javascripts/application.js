@@ -19,7 +19,7 @@ $(document).ready(function(){
     });
   });
 
-  $('.hamburger').click(function(e) {
+  $('.hamburger').click(function(e) { // TOGGLE MOBILE NAV ON HAMBURGER CLICK
     e.preventDefault();
     $('header nav ul').toggleClass('show_nav');
     $(this).toggleClass('menuopen');
@@ -32,14 +32,32 @@ $(document).ready(function(){
       $(this).get(0).offsetHeight;
       $(this).show();
     }
-    
   });
 
-  if ( $(window).width() > 850) { // MEDIUM
+  $('header nav ul li a').click(function() { // TOGGLE MOBILE NAV ON NAV ITEM CLICK
+    $('header nav ul').toggleClass('show_nav');
+    $('.hamburger').toggleClass('menuopen');
+  });
+
+  if ( $(window).width() > 1025) { // MEDIUM - ORIGINAL 850 CHANGED FOR IPAD
     $('body.index section.work').css("margin-top", screenheight);
   }
   else {
     $('body.index section.work').css("margin-top", 0);
   }
+
+  // window.onorientationchange = function()
+  // {
+  //    window.location.reload();
+  // }
+
+  $('.fancybox').fancybox();
+  
+  $('body').upUpDownDown({
+      watchFor: [38,38,40,40,37,39,37,39,66,65],
+      callback: function(){
+           $(".fancybox").eq(0).trigger('click');
+      }
+  });
 
 });

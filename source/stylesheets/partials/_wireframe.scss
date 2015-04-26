@@ -100,12 +100,14 @@ img {
   }
 }
 
-
-
 .bodycontent {
   @include site-width;
-  display: black;
+  display: block;
   min-height: 100%;
   position: relative;
   padding-top: 75px;
+}
+
+.egg {
+  display: none;
 }

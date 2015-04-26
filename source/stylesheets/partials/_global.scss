@@ -41,10 +41,10 @@ $black: #182128;
     @media only screen and (min-width: 650px){ @content; }
   }
   @else if $media == medium {
-    @media only screen and (min-width: 850px){ @content; }
+    @media only screen and (min-width: 1025px){ @content; } // ORIGINAL 850 - CHANGED FOR IPAD
   }
   @else if $media == large {
-    @media only screen and (min-width: 950px){ @content; }
+    @media only screen and (min-width: 1025px){ @content; } // ORIGINAL 950 - CHANGED FOR IPAD
   }
 }
 

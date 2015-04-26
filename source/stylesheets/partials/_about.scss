@@ -144,8 +144,8 @@
       @include column-count(2);
     }
     li {
-      list-style: disc inside;
-      margin-bottom: 15px;
+      list-style: disc outside;
+      margin: 0 0 15px 15px;
       color: $light-blue;
     }
   }
