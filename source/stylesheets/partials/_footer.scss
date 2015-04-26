@@ -1,10 +1,10 @@
 footer {
   @include site-width;
   padding-top: 60px;
-  padding-bottom: 60px;
   background: $dark-khaki;
   z-index: +1;
   position: relative;
+  text-align: center;
   nav {
     ul {
       text-align: center;
@@ -45,5 +45,82 @@ footer {
     text-align: center;
     color: $dark-blue;
     margin-top: 30px;
+  }
+  .madeof {
+    .tools_icon {
+      width: 90px;
+      height: 30px;
+      padding: 5px;
+      margin: 30px auto 0;
+      background: $light-blue;
+      @include img-content(15px, -3305px);
+      opacity: .5;
+      @include animate-object;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+      &.tools_icon_open {
+        opacity: 1;
+      }
+    }
+    .tools {
+      @include full-width;
+      padding-left: 5%;
+      padding-right: 5%;
+      background: $light-blue;
+      text-align: center;
+      max-height: 0;
+      overflow: hidden;
+      @include animate-object;
+      &.madeofopen {
+        max-height: 500px;
+
+      }
+      h4 {
+        color: $dark-blue;
+        margin-top: 60px;
+      }
+      ul {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 60px;
+        &:hover {
+          a {
+            opacity: .5;
+          }
+        }
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          margin: 15px;
+          a {
+            &:hover {
+              opacity: 1;
+            }
+            &.compass {
+              width: 90px;
+              height: 90px;
+              @include img-content(-20px, -3070px);
+            }
+            &.jquery {
+              width: 90px;
+              height: 90px;
+              @include img-content(-20px, -3190px);
+            }
+            &.middleman {
+              width: 100px;
+              height: 88px;
+              @include img-content(-20px, -2950px);
+            }
+            &.sass {
+              width: 100px;
+              height: 75px;
+              @include img-content(-20px, -2850px);
+            }
+          }
+        }
+      }
+    }
   }
 }

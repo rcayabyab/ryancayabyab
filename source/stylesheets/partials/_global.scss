@@ -113,7 +113,7 @@ $black: #182128;
 // IMAGES
 $sprite: image-url("sprite.svg");
 $sprite-fallback: image-url('sprite.png');
-$sprite-size: 400px 2851px;
+$sprite-size: 400px 3353px;
 
 @mixin sprite-hover($idle-x, $position-y, $hover-x) {
   background-image: $sprite;

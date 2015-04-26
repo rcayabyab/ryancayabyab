@@ -39,6 +39,21 @@ $(document).ready(function(){
     $('.hamburger').toggleClass('menuopen');
   });
 
+  $('.tools_icon').click(function(e) { // TOGGLE MOBILE NAV ON HAMBURGER CLICK
+    e.preventDefault();
+    $('.tools').toggleClass('madeofopen');
+    $(this).toggleClass('tools_icon_open');
+    //FORCES REDRAW IN MOBILE SAFARI
+    if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
+      $('.tools_icon').hide();
+      $('.tools_icon').get(0).offsetHeight;
+      $('.tools_icon').show();
+      $('.tools').hide();
+      $('.tools').get(0).offsetHeight;
+      $('.tools').show();
+    }
+  });
+
   if ( $(window).width() > 1025) { // MEDIUM - ORIGINAL 850 CHANGED FOR IPAD
     $('body.index section.work').css("margin-top", screenheight);
   }
