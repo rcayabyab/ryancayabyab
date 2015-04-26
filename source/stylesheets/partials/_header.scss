@@ -14,7 +14,8 @@ header {
       margin-top: 0;
       float: left;
       @include img-content(-20px, -2550px);
-      display: inline-block;
+      display: block;
+      position: relative;
       @include respond-to(xsmall) {
         margin-top: 5px;
       }
@@ -23,7 +24,7 @@ header {
       }
       &.menuopen {
         @include img-content(-80px, -2550px);
-        display: inline-block;
+        display: block;
       }
     }
     .logo {

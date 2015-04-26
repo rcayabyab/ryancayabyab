@@ -19,11 +19,20 @@ $(document).ready(function(){
     });
   });
 
-  $('.hamburger').click(function() {
-    // e.preventDefault();
+  $('.hamburger').click(function(e) {
+    e.preventDefault();
     $('header nav ul').toggleClass('show_nav');
     $(this).toggleClass('menuopen');
-    return false;
+    //FORCES REDRAW IN MOBILE SAFARI
+    if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
+      $('header nav ul').hide();
+      $('header nav ul').get(0).offsetHeight;
+      $('header nav ul').show();
+      $(this).hide();
+      $(this).get(0).offsetHeight;
+      $(this).show();
+    }
+    
   });
 
   if ( $(window).width() > 850) { // MEDIUM
