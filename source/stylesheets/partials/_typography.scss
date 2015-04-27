@@ -24,6 +24,10 @@ a {
   &:hover {
     color: $dark-blue;
   }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 h1 {
@@ -49,7 +53,7 @@ h3 {
   @include font-size(39);
   font-family: $font-slab;
   color: $light-blue;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
   text-align: center;
   @include respond-to(medium) {
     text-align: left;

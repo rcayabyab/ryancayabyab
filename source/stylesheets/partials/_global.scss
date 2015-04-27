@@ -121,7 +121,6 @@ $sprite-size: 400px 3353px;
 
 @mixin img-content($img-x, $img-y) {
   content: ' ';
-  display: block;
   background-image: $sprite;
   background-size: $sprite-size !important;
   background-position: $img-x $img-y;

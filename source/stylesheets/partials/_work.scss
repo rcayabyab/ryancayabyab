@@ -69,6 +69,32 @@ article.piece {
     margin: 0 0 60px;
   }
   aside {
+    ul.workdone {
+      margin-bottom: 15px;
+      font-family: $font-slab;
+      color: $light-blue;
+      // @include font-size(17);
+      li {
+        display: inline-block;
+        margin-right: 10px;
+        &:hover {
+          cursor: pointer;
+          span {
+            display: block;
+          }
+        }
+        span {
+          display: none;
+          position: absolute;
+          background-color: $light-blue;
+          padding: 5px;
+          font-family: $font-sans;
+          color: $dark-grey;
+          margin-top: -55px;
+          margin-left: 5px;
+        }
+      }
+    }
     p {
       color: $white;
       a {
@@ -109,6 +135,7 @@ article.piece {
         a {
           width: 42px;
           height: 42px;
+          display: block;
           &:hover {
             opacity: 1;
           }

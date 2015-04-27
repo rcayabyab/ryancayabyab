@@ -26,7 +26,6 @@ header {
       }
       &.menuopen {
         @include img-content(-44px, -2790px);
-        display: block;
       }
     }
     .logo {

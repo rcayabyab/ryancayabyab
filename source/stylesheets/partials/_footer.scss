@@ -19,6 +19,7 @@ footer {
         a {
           width: 137px;
           height: 137px;
+          display: block;
           &:hover {
             opacity: 1;
           }
@@ -53,6 +54,7 @@ footer {
       padding: 5px;
       margin: 30px auto 0;
       background: $light-blue;
+      display: block;
       @include img-content(15px, -3305px);
       opacity: .5;
       @include animate-object;
@@ -77,9 +79,10 @@ footer {
         max-height: 500px;
 
       }
-      h4 {
+      h3 {
         color: $dark-blue;
         margin-top: 60px;
+        text-align: center;
       }
       ul {
         text-align: center;
@@ -95,6 +98,7 @@ footer {
           vertical-align: middle;
           margin: 15px;
           a {
+            display: block;
             &:hover {
               opacity: 1;
             }
