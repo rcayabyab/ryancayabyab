@@ -5,11 +5,15 @@
   background: $dark-grey;
   p {
     color: $light-khaki;
+    @include animation(0, 1s, ease-in, fade-in);
     &.leadin {
       @include font-size(19);
       font-family: $font-slab;
       color: $light-blue;
     }
+  }
+  img {
+    @include animation(0, 1s, ease-in, fade-in);
   }
 }
 

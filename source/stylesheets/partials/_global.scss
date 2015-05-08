@@ -164,6 +164,59 @@ $sprite-size: 400px 3353px;
   order: $val;
 }
 
+//ANIMATIONS USAGE @include animation(.5s, 5s, ease-in, fade-in);
+@mixin animation ($delay, $duration, $timing, $animation: linear) {
+  -webkit-animation-delay: $delay;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $timing;
+  -webkit-animation-name: $animation;
+  -webkit-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -moz-animation-delay: $delay;
+  -moz-animation-duration: $duration;
+  -moz-animation-timing-function: $timing;
+  -moz-animation-name: $animation;
+  -moz-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  -o-animation-delay: $delay;
+  -o-animation-duration: $duration;
+  -o-animation-timing-function: $timing;
+  -o-animation-name: $animation;
+  -o-animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-timing-function: $timing;
+  animation-name: $animation;
+  animation-fill-mode: forwards; /* this prevents the animation from restarting! */
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+// ANIMATION TYPE
+@include keyframes(fade-in) {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@include keyframes(grow) {
+  0%   { max-height: 0; }
+  100% { max-height: 9999px; }
+}
+
 // OTHER STYLES
 
 .button {

@@ -24,6 +24,8 @@ section.hero {
     width: 100%;
     top: auto;
     @include vendor-prefix(transform, translateY(auto));
+    opacity: 0;
+    @include animation(.5s, 1s, ease-in, fade-in);
     @include respond-to(medium) {
       position: absolute;
       top: 60%;
@@ -32,9 +34,13 @@ section.hero {
     span {
       color: $dark-khaki;
       display: block;
+      opacity: 0;
+      @include animation(2s, 1s, ease-in, fade-in);
     }
     img {
       margin-top: 30px;
+      opacity: 0;
+      @include animation(4s, 1s, ease-in, fade-in);
     }
   }
 }
