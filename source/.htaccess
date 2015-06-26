@@ -22,6 +22,10 @@
     <IfModule mod_headers.c>
         # Make sure proxies don't deliver the wrong content
         Header append Vary User-Agent env=!dont-vary
+        # WEEK
+        <FilesMatch "\.(jpg|jpeg|png|gif|svg|woff|js|css)$">
+            Header set Cache-Control "max-age=604800, public"
+        </FilesMatch>
     </IfModule>
 </IfModule>
 
