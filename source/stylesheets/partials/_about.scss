@@ -81,6 +81,11 @@
           height: 57px;
           @include img-content(-20px, -870px);
         }
+        &.powerhouse {
+          width: 90px;
+          height: 90px;
+          @include img-content(-20px, -3380px);
+        }
         &.pg {
           width: 137px;
           height: 60px;
