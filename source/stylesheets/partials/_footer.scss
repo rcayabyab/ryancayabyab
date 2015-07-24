@@ -17,8 +17,8 @@ footer {
         display: inline-block;
         margin: 15px;
         a {
-          width: 137px;
-          height: 137px;
+          width: 90px;
+          height: 90px;
           display: block;
           &:hover {
             opacity: 1;
@@ -27,16 +27,22 @@ footer {
             @include img-content(-20px, -1630px);
           }
           &.linkedin {
-            @include img-content(-20px, -1800px);
+            @include img-content(-20px, -1760px);
           }
           &.twitter {
-            @include img-content(-20px, -1980px);
+            @include img-content(-20px, -1880px);
           }
           &.facebook {
-            @include img-content(-20px, -2170px);
+            @include img-content(-20px, -2000px);
           }
           &.instagram {
-            @include img-content(-20px, -2350px);
+            @include img-content(-20px, -2120px);
+          }
+          &.dribble {
+            @include img-content(-20px, -2240px);
+          }
+          &.github {
+            @include img-content(-20px, -2360px);
           }
         }
       }
