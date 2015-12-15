@@ -1,0 +1,30 @@
+---
+title: Ryan Cayabyab - Interactive Designer / Front-End Dev - Work - Cincinnati Design Week
+---
+
+<article class="split piece">
+
+  <aside>
+    <h3>Cincinnati Design Week</h3>
+    <ul class="workdone">
+      <li>UI<span>User Interface Design</span></li>
+      <li>&lt;/&gt;<span>Front-End Development</span></li>
+    </ul>
+    <p>Cincinnati Design Week is AIGA Cincinnati's multiple day celebration of creativity made up of workshops, studio tours, panel discussions, and of course, great parties. In 2015, when the new site was pushed live, there were seventeen events in a matter of seven days. In those seven days, AIGA Cincinnati was able to bring in over 1,400 attendees.</p>
+    <p><%= link_to 'Visit Site','http://cincinnatidesignweek.com/' %></p>
+    <ul class="cycle">
+      <li><%= link_to 'Previous Project','/work/pep_promotions.html', class:'left_arrow' %></li>
+      <li><%= link_to 'Next Project','/work/empower_mediamarketing.html', class:'right_arrow' %></li>
+    </ul>
+  </aside>
+
+  <div>
+    <%= image_tag("cincinnatidesignweek_responsive_collection.jpg", :alt => "Cincinnati Design Week Website") %>
+    <%= image_tag("cincinnatidesignweek2.jpg", :alt => "Cincinnati Design Week - Presenters Section") %>
+    <%= image_tag("cincinnatidesignweek3.jpg", :alt => "Cincinnati Design Week - Schedule Section") %>
+    <%= image_tag("cincinnatidesignweek4.jpg", :alt => "Empower Cincinnati Design Week - Event Section") %>
+  </div>
+
+</article>
+
+<%= partial "work" %>
