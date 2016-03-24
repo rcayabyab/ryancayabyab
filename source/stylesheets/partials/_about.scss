@@ -81,15 +81,35 @@
           height: 57px;
           @include img-content(-20px, -870px);
         }
+        &.possible {
+          width: 137px;
+          height: 30px;
+          @include img-content(-20px, -3530px);
+        }
         &.powerhouse {
           width: 90px;
           height: 90px;
           @include img-content(-20px, -3380px);
         }
+        &.powers {
+          width: 137px;
+          height: 35px;
+          @include img-content(-20px, -3750px);
+        }
         &.pg {
           width: 137px;
           height: 60px;
           @include img-content(-20px, -970px);
+        }
+        &.proscan {
+          width: 137px;
+          height: 87px;
+          @include img-content(-20px, -3610px);
+        }
+        &.rdg {
+          width: 126px;
+          height: 80px;
+          @include img-content(-20px, -3830px);
         }
         &.rookwood {
           width: 125px;
